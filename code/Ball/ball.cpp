@@ -74,10 +74,10 @@ void drawGLScene()		// Here's Where We Do All The Drawing
 void roate(unsigned char key, int x, int y)
 {
     switch(key) {
-        case 'a': rotate_y -= 10; break;
-        case 'd': rotate_y += 10; break;
-        case 'w': rotate_x -= 10; break;
-        case 's': rotate_x += 10; break;
+        case 'a': rotate_y -= 100; break;
+        case 'd': rotate_y += 100; break;
+        case 'w': rotate_x -= 100; break;
+        case 's': rotate_x += 100; break;
         case 'u': scale += 0.1; break;
         case 'j': scale -= 0.1; break;
         case 't': trans_y += 0.1; break;
