@@ -14,6 +14,7 @@ public:
 	void loadTexture(string textureName, string filename);
 	AUX_RGBImageRec* loadBMP(string fileName);
 	void setTexture(string textureName);
+	GLuint* getTextureIdByName(string textureName);
 
 private:
 	TextureManager();

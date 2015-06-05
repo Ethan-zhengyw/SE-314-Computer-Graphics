@@ -83,7 +83,7 @@ void CharacterManager::displayCharacter(char character, float biasX, float biasY
 			glVertex3f(
 				biasX + 8 * model.vertices[indexs[j]][0],
 				biasY + 10 * model.vertices[indexs[j]][1],
-				biasZ + 5 * model.vertices[indexs[j]][2]
+				biasZ + 10 * model.vertices[indexs[j]][2]
 				);
 		}
 		glEnd();
@@ -96,7 +96,10 @@ void CharacterManager::displayCharacter(char character, float biasX, float biasY
 void CharacterManager::displayString(string sentence, float baseX, float baseY, float baseZ, bool isLineMode)
 {
 	for (int i = 0; i < sentence.length(); i++) {
-		if (sentence[i] >= 'A' && sentence[i] < 'Z')
+		if (sentence[i] >= 'A' && sentence[i] < 'Z') {
 			displayCharacter(sentence[i], baseX + 32 * i, baseY, baseZ, isLineMode);
+		} else if (sentence[i] >= 'a' && sentence[i] <= 'z') {
+			displayCharacter(sentence[i] - ('a' - 'A'), baseX + 32 * i, baseY, baseZ, isLineMode);
+		}
 	}
 }

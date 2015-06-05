@@ -57,3 +57,7 @@ void TextureManager::loadTexture(string textureName, string filename) {
 	}
 	textures[textureName] = texture;
 }
+
+GLuint* TextureManager::getTextureIdByName(string textureName) {
+	return &textures[textureName];
+}
